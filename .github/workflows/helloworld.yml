@@ -22,3 +22,5 @@ jobs:
 
        - name: "Print current date"
          run : date
+
+# github gave us the machine in which all of this command is running 
