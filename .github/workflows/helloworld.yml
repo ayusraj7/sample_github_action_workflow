@@ -20,3 +20,5 @@ jobs:
        - name: "Print hello world" #name of the step 
          run: echo "Hello World" # what should happen in particular step so there we use run 
 
+       - name: "Print current date"
+         run : date
