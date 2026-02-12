@@ -1,0 +1,22 @@
+name : "Hello World workflow" 
+
+
+# it is used to register an event
+
+
+# if somebody pushes anything on branches main or prod 
+on: 
+  push:
+    branches:
+      - main
+      - prod 
+
+
+# runner : it is the environment where my workflow runs. 
+jobs: 
+  hello_world:  # this is the name of the job and we create the new object of joj name 
+     runs-on: ubuntu-latest   # it defines the type of environment of the machine where this particular workflow is going to execute 
+     steps: 
+       - name: "Print hello world" #name of the step 
+         run: echo "Hello World" # what should happen in particular step so there we use run 
+
