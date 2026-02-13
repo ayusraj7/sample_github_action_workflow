@@ -6,6 +6,10 @@ on:
       branches:
         - main
         - test
+    
+    schedule: 
+        - cron: "0 10 * * 2,4"
+        
     pull_request: # Event: Whenever a pull request is made to the repository 
       branches:
         - main
@@ -45,4 +49,11 @@ jobs:
         steps: 
             - name: "Running on workflow dispatch"
               run: echo "Running on workflow dispatch"
+
+    on-schedule: 
+        if: github.event_name == 'schedule'
+        runs-on: ubuntu-latest
+        steps: 
+            - name: "Running on schedule"
+              run: echo "Running on schedule"
 
